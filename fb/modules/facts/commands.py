@@ -50,6 +50,9 @@ class FactsCommandModule:
 		if room is not None and not room.allowed('facts'):
 			return False
 			
+		if random.random() > 0.15:
+			return False
+			
 		body = args.group()
 
 		response = None
